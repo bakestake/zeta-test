@@ -1,4 +1,4 @@
-import { isNetworkName } from "@zetachain/addresses";
+import { isNetworkName } from "../../../addresses/src";
 import { parseUnits } from "ethers/lib/utils";
 import { ethers, network } from "hardhat";
 

@@ -1,4 +1,4 @@
-import { isNetworkName } from "@zetachain/addresses";
+import { isNetworkName } from "../../../addresses/src";
 import { ethers, network } from "hardhat";
 
 import { getMultiChainSwapUniV2 } from "../../lib/multi-chain-swap/MultiChainSwap.helpers";

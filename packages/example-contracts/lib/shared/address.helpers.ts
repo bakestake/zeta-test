@@ -1,4 +1,4 @@
-import { getAddress as getAddressLib, NetworkName, ZetaAddress, ZetaNetworkName } from "@zetachain/addresses";
+import { getAddress as getAddressLib, NetworkName, ZetaAddress, ZetaNetworkName } from "../../../addresses/dist";
 import { network } from "hardhat";
 
 const MissingZetaNetworkError = new Error(

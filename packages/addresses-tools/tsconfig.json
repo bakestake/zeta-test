@@ -3,7 +3,7 @@
   "include": ["./src", "./src/**/*.json"],
   "compilerOptions": {
     "baseUrl": "./src",
-    "outDir": "./dist",
+    "outDir": "./src",
     "rootDir": "./src",
     "paths": {
       "~/*": [

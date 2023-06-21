@@ -1,4 +1,4 @@
-import { NetworkName } from "@zetachain/addresses";
+import { NetworkName } from "../../../addresses/src";
 
 type ChainId = 0 | 5 | 97 | 1001 | 1337 | 80001;
 

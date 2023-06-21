@@ -1,4 +1,4 @@
-import { NetworkName, ZetaAddress, ZetaNetworkName } from "@zetachain/addresses";
+import { NetworkName, ZetaAddress, ZetaNetworkName } from "../../../addresses/src";
 import { getScanVariable } from "@zetachain/addresses-tools";
 import { execSync } from "child_process";
 import { BaseContract, ContractFactory } from "ethers";

@@ -5,7 +5,7 @@
     "noImplicitAny": true,
     "moduleResolution": "node",
     "sourceMap": false,
-    "outDir": "dist",
+    "outDir": "src",
     "esModuleInterop": true,
     "baseUrl": "./",
     "declaration": true,

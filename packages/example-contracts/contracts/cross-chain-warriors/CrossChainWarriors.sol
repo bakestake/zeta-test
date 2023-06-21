@@ -16,12 +16,7 @@ interface CrossChainWarriorsErrors {
     error ErrorApprovingZeta();
 }
 
-contract CrossChainWarriors is
-    ERC721("CrossChainWarriors", "CCWAR"),
-    ZetaInteractor,
-    ZetaReceiver,
-    CrossChainWarriorsErrors
-{
+contract CrossChainWarriors is ERC721("StakeNBake", "BAKE"), ZetaInteractor, ZetaReceiver, CrossChainWarriorsErrors {
     using Counters for Counters.Counter;
     using Strings for uint256;
 
@@ -68,6 +63,21 @@ contract CrossChainWarriors is
 
         _safeMint(to, newWarriorId);
         return newWarriorId;
+    }
+
+    /**
+    * @dev tokenURI overrides the Openzeppelin's ERC721 implementation for tokenURI function
+    * This function returns the URI from where we can extract the metadata for a given tokenId
+    */
+
+    function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
+        //require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
+        // require(_existence(tokenId));
+        // Here it checks if the length of the baseURI is greater than 0, if it is return the baseURI and attach
+        // the tokenId and `.json` to it so that it knows the location of the metadata json file for a given
+        // tokenId stored on IPFS
+        // If baseURI is empty return an empty string
+        return bytes(baseURI).length > 0 ? string(abi.encodePacked(baseURI, tokenId.toString(), ".json")) : "";
     }
 
     /**

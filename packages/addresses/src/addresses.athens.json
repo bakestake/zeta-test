@@ -2,7 +2,7 @@
   "bsc-testnet": {
     "connector": "0x000054d3A0Bc83Ec7808F52fCdC28A96c89F6C5c",
     "crossChainCounter": "",
-    "crossChainNft": "0xF7f6534C8f70f6001Fc267b55abfAA8B8a41Ea2e",
+    "crossChainNft": "0x6e9132159E692c8390A49b1690bc14A5B17e5994",
     "dai": "",
     "immutableCreate2Factory": "0x095a03c6a68137fE9a566bBc3e552F299d8b886d",
     "multiChainSwap": "0xa0b5cbdc4d14c4f4d36483ec0de310919f3b2d90",
@@ -27,7 +27,7 @@
   "goerli": {
     "connector": "0x00007d0BA516a2bA02D77907d3a1348C1187Ae62",
     "crossChainCounter": "",
-    "crossChainNft": "0xfE9eb065cab82421D06C8eD41c31Beb473a5Fa7e",
+    "crossChainNft": "0x1c40Fd292C8112bb3F9eA65Fb535A13a0D1E761d", 
     "dai": "",
     "immutableCreate2Factory": "0x095a03c6a68137fE9a566bBc3e552F299d8b886d",
     "multiChainSwap": "0x805fE47D1FE7d86496753bB4B36206953c1ae660",

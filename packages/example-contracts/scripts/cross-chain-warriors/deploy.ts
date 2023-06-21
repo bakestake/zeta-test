@@ -1,5 +1,5 @@
-import { isNetworkName } from "@zetachain/addresses";
-import { saveAddress } from "@zetachain/addresses-tools";
+import { isNetworkName } from "../../../addresses/src";
+import { saveAddress } from "@zetachain/addresses-tools"
 import { ethers, network } from "hardhat";
 
 import { getCrossChainWarriors } from "../../lib/cross-chain-warriors/CrossChainWarriors.helpers";
@@ -10,11 +10,18 @@ async function main() {
   const crossChainWarriorsContract = await getCrossChainWarriors();
 
   console.log("Setting base URI");
+  if (network.name == "goerli")
   (
     await crossChainWarriorsContract.setBaseURI(
-      "https://gateway.pinata.cloud/ipfs/QmNRP9kZ2SJXnFnxwvhQbxQHQuXVWVive3JkCNgG6315iH/"
+      "ipfs://QmZr2AE1Rgxd9sQB7DWucKanSVZRjwFooBzM6grHb3GuJw/"
     )
   ).wait();
+  else
+  (
+    await crossChainWarriorsContract.setBaseURI(
+      "https://ipfs.io/ipfs/QmZr2AE1Rgxd9sQB7DWucKanSVZRjwFooBzM6grHb3GuJw/"
+    )
+  ).wait()
 
   const [deployer] = await ethers.getSigners();
 

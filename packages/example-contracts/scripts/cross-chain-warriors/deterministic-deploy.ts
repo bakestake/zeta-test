@@ -1,4 +1,4 @@
-import { isNetworkName } from "@zetachain/addresses";
+import { isNetworkName } from "../../../addresses/src";
 import { saveAddress } from "@zetachain/addresses-tools";
 import { BigNumber } from "ethers";
 import { ethers, network } from "hardhat";
